@@ -1,0 +1,71 @@
+.wrapper {
+    max-width: 1180px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: 700;
+font-size: 35px;
+line-height: 42px;
+margin-bottom: 40px;
+}
+
+.subtitle {
+    color: $grayColor;
+    line-height: 24px;
+    margin-bottom: 40px;
+}
+
+.pinkColor {
+    color: $pinkColor;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding: 16px 22px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    color: #fff;
+    outline: none;
+    background:  $blueColor;
+    border-radius: 5px;
+    border: 0;
+    transition: background 200ms ease, color 0.35s;
+}
+
+.btn:hover {
+    background: #0038FF;
+}
+
+.btn--intro {
+    width: 325px;
+    text-align: center;
+}
+
+.btn--pink {
+    background-color: $pinkColor;
+}
+
+.btn--white {
+    color: $blueColor;
+    background-color: $whiteColor;
+}
+.btn--white:hover {
+    color: #fff;
+}
+
+.btn--border {
+    color: $blueColor;
+    border: 1px solid $blueColor;
+    background-color: inherit;
+    display: inline-flex;
+    align-items: center;
+    &:hover {
+        color: #fff;
+    }
+}
