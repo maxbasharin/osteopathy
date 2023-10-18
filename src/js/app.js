@@ -219,13 +219,6 @@ $('.btn--consultation').click(function () {
   });
 });
 
-$('.btn--requirements').click(function () {
-  $.fancybox.open({
-    src: '#form--requirements',
-    type: 'inline'
-  });
-});
-
 function zero_first_format(value) {
   if (value < 10) {
     value = '0' + value;
