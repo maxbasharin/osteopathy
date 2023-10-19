@@ -78,7 +78,21 @@ const observer = lozad(); // lazy loads elements with default selector as ".loza
 				}
 		}).observe()
 
-
+    $('.techer__achievements-slider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow:
+        '<img class="techer__achievements-slider-left" src="images/arrow-left.svg" alt="">',
+      nextArrow:
+        '<img class="techer__achievements-slider-right" src="images/arrow-right.svg" alt="">',
+    });
+    $('.techer__achievements-slider').on(
+      'afterChange',
+      function (event, slick, currentSlide) {
+        $('#pagination').text(currentSlide + 1);
+      }
+    );
 $('.diplom__slider').slick({
   infinite: true,
   autoplay: true,
@@ -215,13 +229,6 @@ $('.btn--education').click(function () {
 $('.btn--consultation').click(function () {
   $.fancybox.open({
     src: '#form--consultation',
-    type: 'inline'
-  });
-});
-
-$('.btn--requirements').click(function () {
-  $.fancybox.open({
-    src: '#form--requirements',
     type: 'inline'
   });
 });
