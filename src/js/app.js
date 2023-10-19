@@ -78,21 +78,56 @@ const observer = lozad(); // lazy loads elements with default selector as ".loza
 				}
 		}).observe()
 
-    $('.techer__achievements-slider').slick({
+    $('.techer__achievements-slider--documents').slick({
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       prevArrow:
-        '<img class="techer__achievements-slider-left" src="images/arrow-left.svg" alt="">',
+        '<img class="techer__achievements-slider__left" src="images/arrow-left.svg" alt="">',
       nextArrow:
-        '<img class="techer__achievements-slider-right" src="images/arrow-right.svg" alt="">',
+        '<img class="techer__achievements-slider__right" src="images/arrow-right.svg" alt="">',
     });
-    $('.techer__achievements-slider').on(
+
+    $('.techer__achievements-slider--documents').on(
       'afterChange',
       function (event, slick, currentSlide) {
-        $('#pagination').text(currentSlide + 1);
+        $('#pagination--documents').text(currentSlide + 1);
       }
     );
+    $('.techer__achievements-slider--youtube').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow:
+        '<img class="techer__achievements-slider__left" src="images/arrow-left.svg" alt="">',
+      nextArrow:
+        '<img class="techer__achievements-slider__right" src="images/arrow-right.svg" alt="">',
+    });
+
+    $('.techer__achievements-slider--youtube').on(
+      'afterChange',
+      function (event, slick, currentSlide) {
+        $('#pagination--youtube').text(currentSlide + 1);
+      }
+    );
+    $('.techer__achievements-slider--instagram').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow:
+        '<img class="techer__achievements-slider__left" src="images/arrow-left.svg" alt="">',
+      nextArrow:
+        '<img class="techer__achievements-slider__right" src="images/arrow-right.svg" alt="">',
+    });
+
+    $('.techer__achievements-slider--instagram').on(
+      'afterChange',
+      function (event, slick, currentSlide) {
+        $('#pagination--instagram').text(currentSlide + 1);
+      }
+    );
+
+
 $('.diplom__slider').slick({
   infinite: true,
   autoplay: true,
